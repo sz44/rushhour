@@ -12,7 +12,15 @@ INITIAL_MULTI = """
 000000
 000000
 """
+
 INITIAL = INITIAL_MULTI.replace("\n", "")
+
+def toArray(state):
+    res = []
+    for i in range(0, SIZE * SIZE, 6):
+        row = list(state[i: i + 6])
+        res.append(row)
+    return res
 
 HORZS = "1"
 VERTS = "2"
